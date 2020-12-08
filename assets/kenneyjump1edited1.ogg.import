@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kenneyjump1edited1.ogg-aa85c564bb305743be03a90a0ebc245d.oggstr"
+
+[deps]
+
+source_file="res://assets/kenneyjump1edited1.ogg"
+dest_files=[ "res://.import/kenneyjump1edited1.ogg-aa85c564bb305743be03a90a0ebc245d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

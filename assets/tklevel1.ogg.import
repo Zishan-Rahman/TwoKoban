@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tklevel1.ogg-a83e43eade9f7db2054c2fe9a58310b6.oggstr"
+
+[deps]
+
+source_file="res://assets/tklevel1.ogg"
+dest_files=[ "res://.import/tklevel1.ogg-a83e43eade9f7db2054c2fe9a58310b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
