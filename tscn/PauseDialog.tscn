@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tres/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/PauseDialog.gd" type="Script" id=2]
+
+[node name="PauseDialog" type="AcceptDialog"]
+margin_left = 32.0
+margin_top = 40.0
+margin_right = 224.0
+margin_bottom = 116.0
+theme = ExtResource( 1 )
+window_title = "Pause"
+resizable = true
+dialog_text = "You have paused the game. Click OK to return."
+dialog_autowrap = true
+script = ExtResource( 2 )

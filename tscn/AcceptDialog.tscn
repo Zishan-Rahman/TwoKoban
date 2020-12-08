@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tres/ui_theme.tres" type="Theme" id=1]
+
+[node name="AcceptDialog" type="AcceptDialog"]
+margin_left = 56.0
+margin_top = 48.0
+margin_right = 204.0
+margin_bottom = 106.0
+theme = ExtResource( 1 )
+window_title = "Level Complete"
+resizable = true
+dialog_text = "Click OK to advance."

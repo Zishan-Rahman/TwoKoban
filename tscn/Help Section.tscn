@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tres/level_label_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://tscn/Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tscn/GoBackButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Read.gd" type="Script" id=4]
+[ext_resource path="res://tscn/ConfirmationDialog.tscn" type="PackedScene" id=5]
+
+[node name="Help Section" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
+
+[node name="HelpTitle" type="Label" parent="."]
+margin_left = 96.0
+margin_right = 160.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Help"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpText" type="RichTextLabel" parent="."]
+margin_top = 16.0
+margin_right = 256.0
+margin_bottom = 128.0
+focus_mode = 2
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "There are 10 Sokoban puzzles in this game. Please excuse the level names; I had trouble thinking of decent ones! Oh, and none of the levels are locked, so feel free to choose which one you want to start with, but there's a surprise when you finish level 10!
+
+WASD controls the Blue player while the arrow keys control the Yellow player. You have to get the blue and yellow boxes to their respective spaces, but only the blue player can push the blue box and only the yellow player can push the yellow box. You can go into each other's goals, though.
+Try it as a 2-player challenge, where one player is Blue and the other is Yellow, or try and control both players yourself for an extra challenge!
+Pressing P pauses the game while pressing J resets the level. Pressing the Escape key at any time allows you to quit the game.
+
+P.S. There is an occassional bug that results in two sprites overlapping (usually the two players), and neither sprite (usually the players) can move anywhere. Just restart the game by pressing J when that happens. Oh yeah, and there's no undo button, so you better be careful, soldiers! ;-)"
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoBackButton" parent="." instance=ExtResource( 3 )]
+
+[node name="ConfirmationDialog" parent="." instance=ExtResource( 5 )]

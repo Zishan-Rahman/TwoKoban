@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/yellowgoal.png" type="Texture" id=1]
+[ext_resource path="res://tscn/copyshape.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Goal.gd" type="Script" id=3]
+
+[node name="YellowGoal" type="Area2D" groups=[
+"goal",
+"yellow",
+]]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="copyshape" parent="." instance=ExtResource( 2 )]
+[connection signal="body_entered" from="." to="." method="_on_Goal_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Goal_body_exited"]

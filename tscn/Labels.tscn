@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tres/level_label_font.tres" type="DynamicFont" id=1]
+
+[node name="Labels" type="Node"]
+
+[node name="LevelLabel" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 2.6967
+margin_right = 40.0
+margin_bottom = 15.6967
+custom_fonts/font = ExtResource( 1 )
+text = "Level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLabel" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 15.6967
+margin_right = 61.0
+margin_bottom = 28.6967
+custom_fonts/font = ExtResource( 1 )
+text = "Moves: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReminderLabel1" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 28.6967
+margin_right = 72.0
+margin_bottom = 41.6967
+custom_fonts/font = ExtResource( 1 )
+text = "P to Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReminderLabel2" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 41.6967
+margin_right = 76.0
+margin_bottom = 54.6967
+custom_fonts/font = ExtResource( 1 )
+text = "J to Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}

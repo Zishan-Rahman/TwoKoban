@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/gamewall.png" type="Texture" id=1]
+[ext_resource path="res://tscn/copyshape.tscn" type="PackedScene" id=2]
+
+[node name="Wall" type="StaticBody2D" groups=[
+"wall",
+]]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="copyshape" parent="." instance=ExtResource( 2 )]

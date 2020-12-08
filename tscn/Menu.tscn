@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tres/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/tkblogo.png" type="Texture" id=2]
+[ext_resource path="res://tscn/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=4]
+[ext_resource path="res://tscn/ConfirmationDialog.tscn" type="PackedScene" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+
+[node name="TwoKobanLogo" type="Sprite" parent="."]
+position = Vector2( 128, 24 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="StartButton" type="Button" parent="Buttons"]
+margin_left = 96.0
+margin_top = 48.0
+margin_right = 160.0
+margin_bottom = 72.0
+theme = ExtResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="Buttons"]
+margin_left = 96.0
+margin_top = 72.0
+margin_right = 160.0
+margin_bottom = 96.0
+theme = ExtResource( 1 )
+text = "Help"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsButton" type="Button" parent="Buttons"]
+margin_left = 96.0
+margin_top = 96.0
+margin_right = 160.0
+margin_bottom = 120.0
+theme = ExtResource( 1 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+margin_left = 96.0
+margin_top = 120.0
+margin_right = 160.0
+margin_bottom = 143.0
+theme = ExtResource( 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmationDialog" parent="." instance=ExtResource( 5 )]
+[connection signal="pressed" from="Buttons/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Buttons/HelpButton" to="." method="_on_HelpButton_pressed"]
+[connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tres/level_label_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://tscn/Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tscn/GoBackButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Read.gd" type="Script" id=4]
+[ext_resource path="res://tscn/ConfirmationDialog.tscn" type="PackedScene" id=5]
+
+[node name="Credits Section" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
+
+[node name="CreditsTitle" type="Label" parent="."]
+margin_left = 96.0
+margin_right = 160.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Credits"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsText" type="RichTextLabel" parent="."]
+margin_top = 16.0
+margin_right = 256.0
+margin_bottom = 128.0
+focus_mode = 2
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Me: Zishan Rahman.
+Software used:
+- Godot Game Engine
+- Windows 10 File Explorer
+- Tiled (not for making the levels, but for some of the assets in this game).
+- GNU Image Manipulation Program
+- Inkscape
+- Audacity
+- OpenMPT
+- Mozilla Firefox and Discord, both for seeking help, queries and just wasting time. Also, Mozilla Firefox for web testing.
+
+Thanks to the organisers of the 2020 United Game Jam for finally making me do something during quarantine!
+
+And also, a huge huge thank you to Emilio for his amazing Godot tutorials on YouTube. His grid puzzle tutorials have greatly influenced this game, and some of the code behind this game has been lifted from these tutorials, with his permission, and edited (by me) to fit the specifically needed logic for this game. Without him and his tutorials, I probably wouldn't've even felt confident to enter a game jam in the first place, let alone MAKE a decent game!
+
+Thanks to Kenney for his amazing free assets. This game wouldn't look nearly as good without them!
+
+I guess if I actually did anything, I designed the levels and UIs, composed the music, written some of the logic (mainly behind the menus and the handling of the blue and yellow colours), edited some of the assets to be smaller and have transparent backgrounds, and basically assembled everything together through Godot. Oh, and some other things too!
+
+Thanks again! :-)"
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoBackButton" parent="." instance=ExtResource( 3 )]
+
+[node name="ConfirmationDialog" parent="." instance=ExtResource( 5 )]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tscn/copyshape.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bluebox.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Box.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.55289, 7.44161 )
+
+[node name="BlueBox" type="KinematicBody2D" groups=[
+"blue",
+"box",
+]]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="copyshape" parent="." instance=ExtResource( 1 )]
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, 16 )
+
+[node name="Tween" type="Tween" parent="."]
